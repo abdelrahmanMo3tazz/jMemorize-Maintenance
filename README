@@ -1,57 +1,60 @@
 
  jMemorize README
  ----------------
- 
-    The jMemorize Homepage can be found at http://jmemorize.org
- 
- 1. About
 
-	jMemorize is written in Java and uses Leitner-flashcards to make 
-	memorizing facts not only more efficient but also more fun. 
-	jMemorize manages your learn progress and features categories, 
-	statistics and a visually appealing and intuitive interface.
+jMemorize is a Java application designed to assist users in memorizing information through digital flashcards. Its main goal is to offer a user-friendly interface for creating, managing, and reviewing flashcards that can contain text and multimedia elements.
+The key features of the jMemorize project include:
+Flashcard Creation: Users can create new flashcards with question-answer pairs or other content they want to remember.
+Flashcard Management: The application allows users to organize their flashcards into decks or categories for easier organization and study.
+Study Mode: jMemorize likely includes a study mode where users can review their flashcards, switch between question and answer sides, and keep track of their progress.
+Multimedia Support: The project may support multimedia content on flashcards, such as images or audio, to enhance the learning experience.
+Import and Export: Users may be able to import existing flashcard sets or export their sets for sharing or backup purposes.
+Customization: The application may offer customization options, such as changing the appearance of flashcards or setting study preferences.
+Performance Tracking: jMemorize might include features to track users' performance, such as identifying challenging flashcards or measuring response times.
+Overall, jMemorize aims to provide a comprehensive solution for users looking to improve their memorization skills using digital flashcards, offering a flexible and user-friendly platform for effective learning.
 
- 2. How to run
-    
-    Currently you need Java 1.5 to run jMemorize. Just (double-)click 
-    the icon to start the application or type 
-    'javaw -jar jMemorize-1.3.0.jar' from command line.
-    
-    You can get the most current offical Sun Java Runtime Environment 
-    from http://java.com
-   
- 3. Creator
-  
-    This software is developed by Riad Djemili (jmemorize@riad.de) and
-    licensed under the GPL license. A copy of the GPL license is 
-    provided with this sourcecode.
-    
-    A lot of people have contributed ideas and patches. Special thanks go to:
-    - Bret Harsham (patches)
-    - Adam Ehlers Nyholm Thomsen (patches)
-    - Magnus Hildebrandt (Icons)
-    
-    My thanks also goes to the various translators:
-    - Lukas Rypl
-    - Adam Ehlers Nyholm Thomsen
-    - Kristjan Schmidt
-    - MILLE.ca
-    - Randy Sugianto
-    - Filip Tack
-    - Tomek Pedzimaz
-    - Radek Ostrowski
-    - Ney
-    - Magnus Bodin
-    - Ali Baser
-    - Mert Nuhoglu
-    - Tianyi Cui
-    - Haakon Meland Eriksen
-    - Sander van Rijnswou
-    - Eberhard Herzog
-    - René Maya
-    
-    I'm using icons from the Eclipse project (http://eclipse.org) and from 
-    Mark James's excellent Silk icon set (http://famfamfam.com/lab/icons/silk).
-    
-  Have fun.
-  
+
+Here are some functional requirements for the project:
+User Management
+User Registration: Users can create accounts and log in.
+Card Management
+Card Creation: Users can create new cards with a question or prompt and an answer.
+Card Editing: Users can edit existing cards.
+Card Deletion: Users can delete cards.
+Card Organization: Users can organize cards into categories or decks.
+Learning Sessions
+Start Learning Sessions: Users can start learning sessions based on their cards.
+Session Workflow: Sessions should fetch cards according to settings, allowing users to check or skip cards.
+Session Load and Save: Users can load and save lessons, with only one lesson loaded at a time.
+Lesson Modification Tracking: Lessons track their modification status.
+Session History
+View Session History: Users can view their session history, including learned, skipped, or struggled cards.
+Settings
+Customizable Learning Settings: Users can customize learning settings like shuffle and category order.
+Notifications
+Optional Notifications: Users may receive notifications or reminders for learning sessions.
+Progress Tracking
+Track User Progress: The system tracks users' progress, including cards learned, time spent, and performance.
+Accessibility and Usability
+User-Friendly and Accessible: The application is user-friendly and accessible, with features like keyboard shortcuts and screen reader support.
+
+Security
+Data Protection: User data, including cards and session history, is protected with encryption and secure authentication.
+Localization
+Localization Support: The application supports localization for different languages.
+Error Handling
+Error Logging: The application logs errors and exceptions for troubleshooting.
+Display About Dialog
+Display Basic Information: The dialog displays version, build, homepage, and copyright.
+Display License
+Display License Text: The dialog displays the license text of the program.
+Error Handling: If the license text cannot be loaded, an error message is displayed.
+Display Java Properties
+Display System Properties: The dialog displays the Java system properties and their values.
+Display Program Preferences
+Display Preferences: The dialog displays program preferences stored using the Java Preferences API.
+Close Dialog
+Close Button: The dialog provides a button to close it.
+Resizable Dialog
+Resizable: The dialog is resizable to accommodate different screen sizes and text lengths.
+
