@@ -19,12 +19,8 @@
 package jmemorize.core;
 
 import java.awt.Dimension;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,9 +68,7 @@ public class FormattedText implements Cloneable
     private static final String  TAGS = "<(/?(b|i|u|sub|sup)?)>";
     private static final Pattern TEXT_PATTERN = Pattern.compile(
         "(.*?)<(/?(b|i|u|sub|sup)?)>", Pattern.DOTALL);
-    
-//    private static final Pattern IMG_PATTERN = Pattern.compile(
-//        "<img id=\"(.*?)\"/>", Pattern.DOTALL);
+
     
     private static final String CONTENT_ELEMENT_NAME = "content";
     
@@ -278,38 +272,7 @@ public class FormattedText implements Cloneable
                 e1.printStackTrace();
                 Main.logThrowable("Error formatting text", e1);
             }
-        } 
-//        else if (e.getName().equals(StyleConstants.ParagraphConstants.ComponentElementName))
-//        {
-//            AttributeSet attr = e.getAttributes();
-//            JLabel label = (JLabel)attr.getAttribute(
-//                StyleConstants.ParagraphConstants.ComponentAttribute);
-//            
-//            ImageIcon icon = (ImageIcon)label.getIcon();
-//            String description = icon.getDescription();
-//            
-//            try
-//            {
-//                String id = "";
-//                if (description.startsWith(ImageRepository.IMG_ID_PREFIX))
-//                {
-//                    id = description.substring(2);
-//                }
-//                else
-//                {
-//                    File file = new File(description);
-//                    FileInputStream in = new FileInputStream(file);
-//                    id = ImageRepository.getInstance().addImage(in, file.getName());
-//                }
-//                
-//                sb.insert(0, "<img id=\""+ id +"\"/>");
-//            }
-//            catch (IOException e1)
-//            {
-//                e1.printStackTrace();
-//                Main.logThrowable("Error formatting image", e1);
-//            }
-//        }
+        }
         else
         {
             for (int i = 0; i < e.getElementCount(); i++)
