@@ -183,13 +183,7 @@ public class ImageRepository
     
     public String addImage(InputStream in, String filename) throws IOException
     {
-        // TOOD check if image already in our map
-//        for (ImageItem item : m_imageMap.values())
-//        {
-//            if (item.getFile().equals(filename))
-//                return item.getId();
-//        }
-        
+
         ImageItem item = new ImageItem(in, filename);
         String id = item.getId();
         m_imageMap.put(id, item);
