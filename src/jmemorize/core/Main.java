@@ -391,8 +391,7 @@ public class Main extends Observable implements LearnSessionProvider,
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
             URL resource = getClass().getResource(PROPERTIES_PATH);
-            
-//            PROPERTIES.load(resource.openStream());
+
             
             if (resource != null)
             {
@@ -485,6 +484,7 @@ public class Main extends Observable implements LearnSessionProvider,
         {
             if (sourceChannel != null)
                 sourceChannel.close();
+
             
             if (destinationChannel != null)
                 destinationChannel.close();
@@ -545,7 +545,7 @@ public class Main extends Observable implements LearnSessionProvider,
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) 
+    public static void main(String [] args)
     {
         File file = args.length >= 1 ? new File(args[0]) : null;
         Main.getInstance().run(file);        
