@@ -1,21 +1,3 @@
-/*
- * jMemorize - Learning made easy (and fun) - A Leitner flashcards tool
- * Copyright(C) 2004-2008 Riad Djemili and contributors
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 1, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- */
 package jmemorize.core;
 
 import java.util.LinkedList;
@@ -81,7 +63,7 @@ public class CardSide implements Cloneable
     
     public void setImages(List<String> ids)
     {
-        if (mImageIDs.equals(ids))
+        if (imageListsEqual(mImageIDs, ids))
             return;
         
         mImageIDs.clear();
@@ -122,5 +104,19 @@ public class CardSide implements Cloneable
         cardSide.mImageIDs.addAll(mImageIDs);
         
         return cardSide;
+    }
+    
+    /**
+     * Helper method to compare the contents of two lists, ignoring object references.
+     * 
+     * @param list1 The first list.
+     * @param list2 The second list.
+     * @return True if the lists contain the same elements, false otherwise.
+     */
+    private boolean imageListsEqual(List<String> list1, List<String> list2) {
+        if (list1.size() != list2.size()) {
+            return false;
+        }
+        return list1.containsAll(list2);
     }
 }
