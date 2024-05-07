@@ -106,4 +106,12 @@ public class Card implements Events, Cloneable {
     private Date cloneDate(Date date) {
         return date == null ? null : (Date) date.clone();
     }
+
+    public void setDateModified(Date date) {
+        if (date.before(mDateCreated) || date.equals(mDateCreated))
+            throw new IllegalArgumentException(
+                    "Modification date must be after or equal to the creation date.");
+
+        mDateModified = cloneDate(date);
+    }
 }
